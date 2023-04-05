@@ -1,0 +1,15 @@
+<title>
+    {{ title }}
+</title>
+
+<div>
+    {% if objects %}
+    <ul>
+        {% for obj in objects%}
+            <li> {{obj}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No objects given..</p>
+    {% endif %}
+</div>

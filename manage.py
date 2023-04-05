@@ -2,7 +2,6 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-from models.models import Person
 
 
 def main():
@@ -21,9 +20,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-    vanya = Person.objects.filter(id='8910124f-698c-4da5-983d-bd92a725e97d')
-    vanya.delete()
-    vanya_present = Person.objects.contains(id='8910124f-698c-4da5-983d-bd92a725e97d')
-    print(vanya_present)
-    raise SystemExit

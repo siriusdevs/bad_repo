@@ -44,7 +44,7 @@ ROOT_URLCONF = 'lecture_models.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [f'{BASE_DIR}/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,7 +71,15 @@ DATABASES = {
         'PORT': 5555,
         'USER': 'app',
         'PASSWORD': '123'
-    }
+    },
+    # 'backup': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'models_backup',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': 5556,
+    #     'USER': 'app',
+    #     'PASSWORD': '123'
+    # },
 }
 
 # Password validation
